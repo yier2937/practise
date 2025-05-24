@@ -1,3 +1,9 @@
+#  Employee Sentiment Analysis Summary
+
+## Overview
+
+This project analyzes the internal communication sentiment of 10 employees, based on 2,191 messages. The goal was to assess emotional tone, rank engagement, and identify potential flight risks using sentiment classification, visualization, and predictive modeling.
+
 # Instruction：
 Original data :test.csv
 
@@ -19,30 +25,42 @@ Task 5: Detect flight risks using rolling analysis.
 
 Task 6: linear regression to predict future sentiment trends.
 
-# Overview：
-Top 3 most positive employee(from all the data):
-1	johnny.palmer@enron.com
-2	eric.bass@enron.com
-3	lydia.delgado@enron.com
+### Sentiment Distribution:
+- **Neutral**: 1,485 messages (67.8%)
+- **Positive**: 558 messages (25.5%)
+- **Negative**: 148 messages (6.7%)
 
-Top 3 most negative employee(from all the data):
-1	rhonda.denton@enron.com
-2	don.baughman@enron.com
-3	kayne.coulter@enron.com
+Based on monthly cumulative sentiment scores:
 
-monthly top 3 most positive and negative can be found in top_negative_employees.csv;top_positive_employees.csv
+### Top Positive Employees:
+1. **Sally Beck**
+2. **Eric Bass**
+3. **Bobette riner**
 
-Top 4 Employees at Highest Risk of Leaving(Based on sending 4 or more negative emails within any rolling 30-day window)
-1.bobette.riner@ipgdirect.com
-2.don.baughman@enron.com
-3.john.arnold@enron.com
-4.sally.beck@enron.com
+These employees consistently exhibited high levels of positive sentiment in their communications.
 
-Top 3 Most Active Employees(Based on total message count)
-1.lydia.delgado@enron.com
-2.john.arnold@enron.com
-3.patti.thompson@enron.com
 
-These individuals sent the highest number of emails overall, indicating high engagement or visibility in internal communication.
+##  Flight Risk Employees
 
-john.arnold@enron.com appears on both lists, meaning he is highly active but also flagged as a flight risk due to his negative sentiment patterns.
+The following employees were flagged for sending **4 or more negative messages within any 30-day rolling period**:
+
+- **Bobette Riner**
+- **Don Baughman**
+- **John Arnold**
+- **Sally Beck**
+
+These individuals may be experiencing dissatisfaction or stress and warrant further HR or managerial attention.
+
+
+##  Key Insights
+
+- Most messages were **neutral**, suggesting a predominantly informational communication style.
+- A few employees showed **disproportionately high negative tone**, which correlates with flight risk.
+- **Lydia Delgado**, **John Arnold**, and **Patti Thompson** were the top communicators, based on message volume.
+- Predictive modeling using linear regression achieved strong results:
+  - **R² = 0.950**
+  - **RMSE = 0.0096**
+
+
+
+---
